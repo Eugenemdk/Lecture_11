@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_skull"
+            android:icon="@drawable/humanskull"
+            android:title="1.Череп" />
+        <item
+            android:id="@+id/nav_chelust"
+            android:icon="@drawable/humanskull"
+            android:title="2.Челюсть" />
+        <item
+            android:id="@+id/nav_clushitsa"
+            android:icon="@drawable/skeleton"
+            android:title="3.Ключица" />
+        <item
+            android:id="@+id/nav_lopatka"
+            android:icon="@drawable/skeleton"
+            android:title="4.Лопатка" />
+        <item
+            android:id="@+id/nav_grudina"
+            android:icon="@drawable/humanribsbones"
+            android:title="5.Грудина" />
+        <item
+            android:id="@+id/nav_shoulderbone"
+            android:icon="@drawable/boness"
+            android:title="6.Плечевая кость" />
+        <item
+            android:id="@+id/nav_rebra"
+            android:icon="@drawable/humanribsbones"
+            android:title="7.Ребра" />
+        <item
+            android:id="@+id/nav_stolb"
+            android:icon="@drawable/spine"
+            android:title="8.Позвоночный столб" />
+        <item
+            android:id="@+id/nav_luchbone"
+            android:icon="@drawable/boness"
+            android:title="9.Лучевая кость" />
+        <item
+            android:id="@+id/nav_lokbone"
+            android:icon="@drawable/boness"
+            android:title="10.Локтевая кость" />
+        <item
+            android:id="@+id/nav_taz"
+            android:icon="@drawable/hipbone"
+            android:title="11.Таз" />
+        <item
+            android:id="@+id/nav_wrist"
+            android:icon="@drawable/bonehand"
+            android:title="12.Кости запястья" />
+        <item
+            android:id="@+id/nav_wristbone"
+            android:icon="@drawable/bonehand"
+            android:title="13.Пястные кости" />
+        <item
+            android:id="@+id/nav_faloffin"
+            android:icon="@drawable/bonehand"
+            android:title="14.Фаланги пальцев" />
+        <item
+            android:id="@+id/nav_bedro"
+            android:icon="@drawable/hipbone"
+            android:title="15.Бедро" />
+        <item
+            android:id="@+id/nav_kneecouple"
+            android:icon="@drawable/bones"
+            android:title="16.Коленная чашечка"/>
+        <item
+            android:id="@+id/nav_bigbone"
+            android:icon="@drawable/boness"
+            android:title="17.Большая берцовая кость" />
+        <item
+            android:id="@+id/nav_lilbone"
+            android:icon="@drawable/boness"
+            android:title="18.Малоберцовая кость" />
+        <item
+            android:id="@+id/nav_preplusbone"
+            android:icon="@drawable/boness"
+            android:title="19.Кости предплюсны" />
+        <item
+            android:id="@+id/nav_plusbone"
+            android:icon="@drawable/boness"
+            android:title="20.Плюсневые кости" />
+        <item
+            android:id="@+id/nav_falofleg"
+            android:icon="@drawable/masculinefoot"
+            android:title="21.Фаланги пальцев ноги" />
+        <item
+            android:id="@+id/nav_piatka"
+            android:icon="@drawable/masculinefoot"
+            android:title="22.Пятка" />
+    </group>
+
+</menu>
