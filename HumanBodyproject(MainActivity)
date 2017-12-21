@@ -1,0 +1,230 @@
+package com.example.maksim.humanbodyproject;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.view.View;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
+
+public class MainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+    //  FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+    //  fab.setOnClickListener(new View.OnClickListener() {
+    //      @Override
+    //      public void onClick(View view) {
+    //          Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+    //                  .setAction("Action", null).show();
+    //      }
+    //  });
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        setTitle("Скелет");
+    }
+
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_skull) {
+            Data.imageRes = R.drawable.skull;
+            Data.stringRes = R.string.skull_content;
+            Data.title = "Череп";
+            startActivity(new Intent(this, ContentActivity.class));
+
+        }
+
+        else if (id == R.id.nav_clushitsa) {
+            Data.imageRes = R.drawable.klutchitsa;
+            Data.stringRes = R.string.kluchitsa_content;
+            Data.title = "Ключица";
+            startActivity(new Intent(this, ContentActivity.class));
+        }
+        else if (id == R.id.nav_rebra) {
+            Data.imageRes = R.drawable.rebra;
+            Data.stringRes = R.string.rebra_content;
+            Data.title = "Ребра";
+            startActivity(new Intent(this, ContentActivity.class));
+        }
+        else if (id == R.id.nav_chelust) {
+            Data.imageRes = R.drawable.chelust;
+            Data.stringRes = R.string.chelust_content;
+            Data.title = "Челюсть";
+            startActivity(new Intent(this, ContentActivity.class));
+        }
+        else if (id == R.id.nav_lopatka) {
+            Data.imageRes = R.drawable.lopatka;
+            Data.stringRes = R.string.lopatka_content;
+            Data.title = "Лопатка";
+            startActivity(new Intent(this, ContentActivity.class));
+        }
+        else if (id == R.id.nav_grudina) {
+            Data.imageRes = R.drawable.grudina;
+            Data.stringRes = R.string.grudina_content;
+            Data.title = "Грудина";
+            startActivity(new Intent(this, ContentActivity.class));
+        }
+        else if (id == R.id.nav_shoulderbone) {
+            Data.imageRes = R.drawable.justabone;
+            Data.stringRes = R.string.shoulderbone_content;
+            Data.title = "Плечевая кость";
+            startActivity(new Intent(this, ContentActivity.class));
+        }
+        else if (id == R.id.nav_stolb) {
+            Data.imageRes = R.drawable.pozvonochnik;
+            Data.stringRes = R.string.stolb_content;
+            Data.title = "Позвоночник";
+            startActivity(new Intent(this, ContentActivity.class));
+        }
+        else if (id == R.id.nav_luchbone) {
+            Data.imageRes = R.drawable.luchevayabone;
+            Data.stringRes = R.string.luchbone_content;
+            Data.title = "Лучевая кость";
+            startActivity(new Intent(this, ContentActivity.class));
+        }
+        else if (id == R.id.nav_lokbone) {
+            Data.imageRes = R.drawable.loktevayabone;
+            Data.stringRes = R.string.lokbone_content;
+            Data.title = "Локтевая кость";
+            startActivity(new Intent(this, ContentActivity.class));
+        }
+        else if (id == R.id.nav_taz) {
+            Data.imageRes = R.drawable.taz;
+            Data.stringRes = R.string.taz_content;
+            Data.title = "Таз";
+            startActivity(new Intent(this, ContentActivity.class));
+        }
+        else if (id == R.id.nav_wrist) {
+            Data.imageRes = R.drawable.wrist;
+            Data.stringRes = R.string.wrist_content;
+            Data.title = "Кости запястья";
+            startActivity(new Intent(this, ContentActivity.class));
+        }
+        else if (id == R.id.nav_wristbone) {
+            Data.imageRes = R.drawable.wrist;
+            Data.stringRes = R.string.wristbone_content;
+            Data.title = "Пястные кости";
+            startActivity(new Intent(this, ContentActivity.class));
+        }
+        else if (id == R.id.nav_faloffin) {
+            Data.imageRes = R.drawable.falangyfingersofarm;
+            Data.stringRes = R.string.faloffin_content;
+            Data.title = "Фаланги пальцев";
+            startActivity(new Intent(this, ContentActivity.class));
+        }
+        else if (id == R.id.nav_wristbone) {
+            Data.imageRes = R.drawable.wrist;
+            Data.stringRes = R.string.wristbone_content;
+            Data.title = "Пястные кости";
+            startActivity(new Intent(this, ContentActivity.class));
+        }
+        else if (id == R.id.nav_bedro) {
+            Data.imageRes = R.drawable.bedro;
+            Data.stringRes = R.string.wristbone_content;
+            Data.title = "Пястные кости";
+            startActivity(new Intent(this, ContentActivity.class));
+        }
+
+        else if (id == R.id.nav_kneecouple) {
+            Data.imageRes = R.drawable.kneecouple;
+            Data.stringRes = R.string.kneecouple_content;
+            Data.title = "Коленная чашечка";
+            startActivity(new Intent(this, ContentActivity.class));
+        }
+        else if (id == R.id.nav_bigbone) {
+            Data.imageRes = R.drawable.bigberzovayabone;
+            Data.stringRes = R.string.bigbone_content;
+            Data.title = "Большая берцовая кость";
+            startActivity(new Intent(this, ContentActivity.class));
+        } else if (id == R.id.nav_preplusbone) {
+            Data.imageRes = R.drawable.predplusne;
+            Data.stringRes = R.string.preplusbone_content;
+            Data.title = "Кости предплюсны";
+            startActivity(new Intent(this, ContentActivity.class));
+        }
+        else if (id == R.id.nav_plusbone) {
+            Data.imageRes = R.drawable.plusna;
+            Data.stringRes = R.string.plusna_content;
+            Data.title = "Плюсневые кости";
+            startActivity(new Intent(this, ContentActivity.class));}
+        else if (id == R.id.nav_lilbone) {
+        Data.imageRes = R.drawable.littlebezovayabones;
+        Data.stringRes = R.string.lilbone_content;
+        Data.title = "Большая берцовая кость";
+        startActivity(new Intent(this, ContentActivity.class));}
+
+        else if (id == R.id.nav_falofleg) {
+                Data.imageRes = R.drawable.falangyfingerseg;
+                Data.stringRes = R.string.falofleg_content;
+                Data.title = "Большая берцовая кость";
+                startActivity(new Intent(this, ContentActivity.class));}
+        else if (id == R.id.nav_piatka) {
+        Data.imageRes = R.drawable.bonespredplusna;
+        Data.stringRes = R.string.piatka_content;
+        Data.title = "Большая берцовая кость";
+        startActivity(new Intent(this, ContentActivity.class));}
+
+       // startActivity(new Intent(this, ContentActivity.class));
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+}
